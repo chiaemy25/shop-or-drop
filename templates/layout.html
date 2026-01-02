@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Chidalu Emy-Munonye">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop or Drop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="editorial-nav">
+            <div class="nav-logo">
+                <span class="fancy-font">Shop or Drop</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About The Founder</a></li>
+                <li>
+                    <a href="https://docs.google.com/spreadsheets/d/1uTZmLwm58hVWRpSII-Q2Ie12qn7o-RKGLs44MRur8Ao/edit?usp=sharing" target="_blank" class="nav-cta">
+                        Suggest a Brand
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <video autoplay muted loop playsinline id="background-vid" poster="{{ url_for('static', filename='Gradient.jpg')}}">
+        <source src="https://github.com/chiaemy25/shop-or-drop/raw/refs/heads/master/shop_or_drop/static/background.mp4" type="video/mp4">
+    </video>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+     </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

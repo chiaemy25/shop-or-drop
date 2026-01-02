@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="outer-collage">
+     <img src="{{ url_for('static', filename='image_0.jpg') }}" class="collage-img img-pro">
+     <img src="{{ url_for('static', filename='100_0575.jpg') }}" class="collage-img img-street">
+     <img src="{{ url_for('static', filename='Chidalu-NOFW (3).jpg') }}" class="collage-img img-runway">
+    <img src="{{ url_for('static', filename='IMG_9054.jpg') }}" class="collage-img img-bow-jacket">
+    <img src="{{ url_for('static', filename='IMG_9494.jpg') }}" class="collage-img img-glasses-outside">
+    <img src="{{ url_for('static', filename='IMG_2845.jpg') }}" class="collage-img img-blonde-cap">
+    <img src="{{ url_for('static', filename='IMG_2522.jpg') }}" class="collage-img img-night-out">
+    <img src="{{ url_for('static', filename='IMG_1948.jpg') }}" class="collage-img img-pink-dress">
+
+    <section id="about-title">
+        <span class="fancy-font" style="text-align: center; font-size: 4.5rem;"> About the Founder </span>
+    </section>
+
+    <section id="about-page">
+    <div class = "bio first-block">
+        <p>
+            Chidalu is a <span style="font-weight: bold;">Robertson Scholar at Duke University</span>, double majoring in Computer Science and Public Policy. She founded <span style="font-weight: bold;">The Collective, Duke's student-led modeling and fashion organization </span>, which grew to 30+ active members in two months and has hosted multiple campus fashion shows attendees in its first year of existence. She serves as Publicity Chair for StreetMed, Duke's hip hop dance team, and serves as a Duke Presidential Ambassador.
+        </p>
+    </div>
+    <div class = "bio second-block">
+        <p>
+            This past summer, she interned at <span style="font-weight: bold;">Dress for Success New Orleans</span>, a fashion-centered nonprofit, where she published weekly newsletters, managed social media across platforms, maintained the organization's WordPress site, and wrote grant proposals projected to support 1000+ local women annually. Previously, Chidalu was the  <span style="font-weight: bold;"> 2024 YMCA Youth Advocate of Maryland</span>, where she met with congressional offices on Capitol Hill to advocate for youth-centered policies. She also led a public health project through Leadership Initiatives that raised funds for clinics in Nigeria and surveyed over 500 community members on healthcare access.
+        </p>
+    </div>
+    <div class = "bio third-block">
+        <p>
+            Chidalu is a <span style="font-weight: bold;"> Ron Brown Scholar</span> and recipient of the NCWIT Award for Aspirations in Computing. She's participated in Bain Consulting Kickstart, SEO Career Program, MLT Career Prep Program, and serves on the 1000 Dreams Fund Student Advisory Board. As a published poet and public speaker, her work has appeared in American High School Poets and The Greenspring Review.
+        </p>
+    </div>
+    <div class = "bio fourth-block">
+        <p>
+            Her interests span the intersections of fashion, technology, policy, and creative expression. Whether that's coding in Python and Java, designing content in Canva and Adobe Creative Suite, organizing photoshoots and fashion shows, or writing poetry that explores identity and community, she has done it all. She's passionate about travel and recently participated in Duke Kunshan University's Immersion Bootcamp in China. Ask her about bridging the gap between engineers and policymakers, building community through creative projects, or how she taught herself Pure Data to create audio programming experiments!<br>
+        </p>
+    </div>
+
+    </section>
+
+    </div>
+
+{% endblock %}

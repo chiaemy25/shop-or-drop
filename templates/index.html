@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section>
+    <h1>Welcome to <span class="fancy-font" style="font-size: 4.5rem;"> Shop or Drop!</span> </h1>
+    <div class="mission-box">
+        <h1>
+            Start <br>shoping <br> smarter!
+        </h1>
+        <p>
+            Have you been looking out the window and getting increasingly concerned about the color of sky? Well here at <span class="fancy-font" style="font-size: 2rem;">Shop or Drop</span>, so have we. I am tired of paying premium prices for low-quality items to brands that don't consider their effect on the enviornment, so I created <span class="fancy-font" style="font-size: 1.5rem;">Shop or Drop</span> to help more people spend thier money wisely!
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="search-bar">
+    <label for = "brand-name"> Type the name of your favorite brand below (really, I won't judge!) </label>
+        <div class="input">
+             <input type="text" id="brand-name" placeholder="e.g. Zara, H&M, Patagonia">
+             <button id="search-btn"> Submit </button>
+        </div>
+    </div>
+
+</section>
+
+<section class="results-grid">
+    <div class="card brand-card"></div>
+    <div class="card verdict-card"></div>
+    <div class="card score-card"></div>
+</section>
+
+<section class="results-description"></section>
+
+
+{% endblock %}

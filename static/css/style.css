@@ -1,0 +1,361 @@
+:root {
+    --main-bg: #fffffe;
+    --accent-color: #f17daf;
+    --main-color: #3e2419;
+    --sec-accent-color: #fdf0d5;
+
+}
+
+/*-- Wording --*/
+.fancy-font {
+    font-family: 'Pinyon Script', cursive;
+    color: var(--accent-color);
+    line-height: normal;
+
+}
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-color);
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: normal;
+}
+
+/*  pretty nav bar */
+
+.editorial-nav {
+    background-color: var(--main-bg);
+    border-bottom: 1px solid var(--main-color);
+    border-width: 0.25px;
+    box-shadow: 1px 2px 3px #b2b0af;
+    display: flex;
+    height: auto;
+}
+
+
+.nav-logo{
+    font-size: 2.5rem;
+    margin: 5px 50vw 5px 15px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--main-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+
+}
+
+.nav-links a {
+    padding:  0px 15px 0px;
+    text-decoration: none;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a:hover{
+    color: #FF3456;
+    transition: 0.5s ease;
+}
+
+
+
+/* Layout  */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;    /* Centers the box */
+    padding: 0 20px;   /* Prevents text from touching the very edge on mobile */
+}
+
+#background-vid{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.25;
+    filter: blur(20);
+}
+
+section {
+    max-width: 1000px;
+    padding: 2rem 1rem;
+    margin: 0 auto 20px auto;
+    border-bottom: 1px solid rgba(45, 27, 20, 0.2); /* 20% opacity Espresso Brown */
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.25rem;
+    color: var(--main-color);
+}
+
+.mission-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sec-accent-color);
+    max-width: 1100px;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(45, 27, 20, 0.05);
+    text-align: center;
+}
+
+.mission-box p {
+
+    text-align: left;
+    align-items: center;
+    font-size: 1rem; /* Makes the text readable and 'important' */
+    line-height: 1.8;
+    color: var(--main-color);
+    margin: 0;
+    padding-left: 2rem;
+
+}
+
+/* search bar section */
+.search-bar {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.input {
+    display: flex;
+    border: 2px solid var(--main-color);
+    border-radius: 50px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+#brand-name {
+    flex-grow: 1;
+    border: none;
+    padding: 15px 25px;
+    outline: none;
+    font-size: 1rem;
+}
+
+#search-btn {
+    background-color: var(--accent-color);
+    color: var(--main-bg);
+    font-weight: bold;
+    border-radius: 50px;
+    width: 12em;
+    height: 7ex;
+}
+
+#search-btn:hover {
+    background-color: var(--sec-accent-color);
+    color: var(--main-color);
+    border: solid var(--main-color);
+}
+
+/* cutesy results output  */
+
+.results-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.card {
+    aspect-ratio: 1/1;
+    border-radius: 30px;
+    color: white;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(45, 27, 20, 0.12);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+    background: #ffffff;
+    margin-bottom: 15px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 20px 40px rgba(45, 27, 20, 0.1);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* background colors of the cards go here */
+.brand-card {
+    background-color: #D1162F;
+    animation: fadeInUp 0.8s ease-out;
+    max-height: 480px;
+
+}
+
+.verdict-card {
+    background-color: #FF3456;
+    animation: fadeInUp 0.8s ease-out;
+    max-height: 480px;
+}
+
+.score-card {
+    background-color: var(--main-color);
+    padding: 0.3rem;
+    animation: fadeInUp 0.8s ease-out;
+    max-height: 480px;
+
+}
+
+.results-description {
+    background-color: var(--sec-accent-color);
+    border-radius: 30px;
+    color: var(--main-color);
+    padding: 2rem;
+}
+
+
+/* about me */
+
+#about-title {
+    position: relative;
+    z-index: 10;
+    padding-top: 100px;
+    text-align: center;
+    border-bottom: none;
+    padding-bottom: 0.1rem;
+}
+
+#about-page {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 30px;
+    padding: 10px 0;
+    border-bottom: none;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bio {
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    align-items: center;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.bio p {
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+    margin: 0;
+    width: 90%; /* Keeps text nearly touching the sides */
+}
+
+.bio:hover {
+    transform: translateY(-5px);
+}
+
+.first-block {
+    background-color: var(--sec-accent-color);
+    font-size: small;
+    line-height: 1.4rem;
+}
+
+.second-block {
+    background-color: #4e2513;
+    color: var(--main-bg);
+    font-size: small;
+    line-height: 1rem;
+
+}
+
+.third-block {
+    background-color: #4e2513;
+    color: var(--main-bg);
+    font-size: small;
+    line-height: 1.4rem;
+}
+
+.fourth-block {
+    background-color: var(--sec-accent-color);
+    font-size: small;
+    line-height: 1rem;
+
+}
+
+/* outside imaes*/
+
+.collage-stage {
+    position: relative;
+    width: 100%;
+    min-height: 1200px;
+    margin: 0 auto;
+    padding-top: 300px; /* Space for the header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+}
+
+.collage-img {
+    position: absolute;
+    width: 140px;
+    border: 6px solid white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.img-pro {
+    width: 200px;
+    top: 80px;
+    left: 15%;
+    transform: rotate(-4deg);
+    z-index: 5;
+}
+
+.img-street {
+    width: 200px;
+    top: 90px;
+    right: 15%;
+    transform: rotate(5deg);
+    z-index: 5;
+}
+
+.img-grafitti { top: 30%; left: 12%; transform: rotate(8deg); }       /* Tucked near top-left box */
+.img-blonde-cap { top: 48%; left: 10%; transform: rotate(-12deg); } /* Hugging the middle-left gap */
+.img-pink-dress { top: 72%; left: 12%; transform: rotate(15deg); }  /* Tucked near bottom-left box */
+.img-night-out { top: 88%; left: 18%; transform: rotate(-5deg); }   /* Curving under the bottom-left */
+
+.img-glasses-outside { top: 40%; right: 10%; transform: rotate(6deg); } /* Hugging middle-right gap */
+.img-runway { top: 62%; right: 12%; transform: rotate(-15deg); }  /* Tucked near bottom-right box */
+.img-bow-jacket { top: 82%; right: 18%; transform: rotate(10deg); }  /* Curving under the bottom-right */
+
+.collage-img:hover {
+    z-index: 100;
+    transform: scale(1.2) rotate(0deg) !important;
+}
